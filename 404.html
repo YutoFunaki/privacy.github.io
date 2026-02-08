@@ -5,8 +5,12 @@
   <script>
     // GitHub Pagesで404になったパスを取得して、index.htmlにリダイレクト
     // パス情報をクエリパラメータとして保持
-    const path = window.location.pathname.replace('/privacy.github.io', '');
-    const redirect = '/privacy.github.io/?path=' + encodeURIComponent(path);
+    const fullPath = window.location.pathname;
+    // /privacy.github.io/focusflow -> /focusflow を取得
+    const path = fullPath.replace('/privacy.github.io', '');
+    // リポジトリのルートにリダイレクト
+    const baseUrl = window.location.origin + '/privacy.github.io/';
+    const redirect = baseUrl + '?path=' + encodeURIComponent(path);
     window.location.replace(redirect);
   </script>
 </head>
