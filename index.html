@@ -136,9 +136,31 @@
     // アプリごとの設定
     const appConfigs = {
         'focusflow': {
-            dataCollection: '本アプリでは、アプリの改善と分析のために、個人を特定できない範囲でセッション情報（アプリの使用時間、機能の利用状況など）を収集する場合があります。',
-            dataUsage: '収集したセッション情報は、アプリの品質向上、機能改善、ユーザー体験の最適化のためにのみ使用されます。個人を特定する目的では使用されません。',
-            toolsText: '<p>本アプリでは、広告配信ツール等の外部サービスを使用しておりません。</p><p>アプリ内の分析機能により、匿名化されたセッション情報を収集していますが、これらの情報は個人を特定するものではなく、アプリの改善目的でのみ使用されます。</p>'
+            dataCollection: '本アプリでは、サービスの提供と改善のために以下の情報を収集します。',
+            dataUsage: '収集した情報は、アプリの品質向上、機能改善、ユーザー体験の最適化のためにのみ使用されます。',
+            toolsText: `
+                <p>本アプリでは、広告配信ツール等の外部サービスを使用しておりません。</p>
+                
+                <h3 style="font-size: 18px; color: #0075ef; margin-top: 24px; margin-bottom: 12px;">収集する情報</h3>
+                <ul style="margin-left: 20px; color: #555;">
+                    <li>Apple Sign Inによる認証情報（メールアドレス）</li>
+                    <li>セッションデータ（集中時間、BPM設定、カテゴリ）</li>
+                    <li>プレミアムステータス</li>
+                </ul>
+                
+                <h3 style="font-size: 18px; color: #0075ef; margin-top: 24px; margin-bottom: 12px;">使用する第三者サービス</h3>
+                <ul style="margin-left: 20px; color: #555;">
+                    <li>Firebase Authentication（認証）</li>
+                    <li>Cloud Firestore（データ保存）</li>
+                    <li>Firebase Analytics（使用状況分析）</li>
+                </ul>
+                
+                <h3 style="font-size: 18px; color: #0075ef; margin-top: 24px; margin-bottom: 12px;">データの保存場所</h3>
+                <p>Google Cloud Platform（Firebase）にデータを保存しています。</p>
+                
+                <h3 style="font-size: 18px; color: #0075ef; margin-top: 24px; margin-bottom: 12px;">データの削除</h3>
+                <p>アカウント削除時にすべてのデータを削除します。</p>
+            `
         },
         // 他のアプリを追加する場合はここに記述
         // 'otherapp': {
