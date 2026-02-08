@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    // GitHub Pagesで404になったパスを取得して、index.htmlにリダイレクト
+    // パス情報をクエリパラメータとして保持
+    const path = window.location.pathname.replace('/privacy.github.io', '');
+    const redirect = '/privacy.github.io/?path=' + encodeURIComponent(path);
+    window.location.replace(redirect);
+  </script>
+</head>
+<body>
+</body>
+</html>

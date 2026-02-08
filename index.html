@@ -234,8 +234,19 @@
 
 <script>
     // URLのパスからアプリ名を取得
-    const path = window.location.pathname;
-    const appName = path.split('/').filter(segment => segment !== '').pop();
+    // クエリパラメータ(?path=...)がある場合はそこから、ない場合はパスから取得
+    let appName = '';
+    const urlParams = new URLSearchParams(window.location.search);
+    const pathParam = urlParams.get('path');
+    
+    if (pathParam) {
+        // 404.htmlからリダイレクトされた場合
+        appName = pathParam.split('/').filter(segment => segment !== '').pop();
+    } else {
+        // 直接アクセスされた場合
+        const path = window.location.pathname;
+        appName = path.split('/').filter(segment => segment !== '').pop();
+    }
 
     // アプリごとの設定
     const appConfigs = {
