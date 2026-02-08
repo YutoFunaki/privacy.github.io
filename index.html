@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -165,7 +165,8 @@
 
     <br>
 
-    <font class="FontNormal1" color="white">
+    <!-- 動的に変更される部分 -->
+    <font class="FontNormal1" color="white" id="toolsContent">
         本アプリでは、広告配信ツールとしてAdMob(Google Inc.)を使用しており、AdMobが利用者の情報を自動取得する場合があります。
         取得する情報、利用目的、第三者への提供等につきましては、広告配信事業者のアプリケーション・プライバシーポリシーよりご確認ください。
     </font>
@@ -231,4 +232,39 @@
 
 <br>
 
-<html>
+<script>
+    // URLのパスからアプリ名を取得
+    const path = window.location.pathname;
+    const appName = path.split('/').filter(segment => segment !== '').pop();
+
+    // アプリごとの設定
+    const appConfigs = {
+        'focusflow': {
+            usesAdMob: false,
+            toolsText: '本アプリでは、広告配信ツール等の外部サービスを使用しておりません。'
+        },
+        // 他のアプリを追加する場合はここに記述
+        // 'otherapp': {
+        //     usesAdMob: true,
+        //     toolsText: '本アプリでは、広告配信ツールとしてAdMob(Google Inc.)を使用しており...'
+        // }
+    };
+
+    // デフォルトの設定（アプリ名が指定されていない場合やマッチしない場合）
+    const defaultConfig = {
+        usesAdMob: true,
+        toolsText: '本アプリでは、広告配信ツールとしてAdMob(Google Inc.)を使用しており、AdMobが利用者の情報を自動取得する場合があります。取得する情報、利用目的、第三者への提供等につきましては、広告配信事業者のアプリケーション・プライバシーポリシーよりご確認ください。'
+    };
+
+    // アプリ名に対応する設定を取得（存在しない場合はデフォルト）
+    const config = appConfigs[appName] || defaultConfig;
+
+    // 「使用ツール」セクションの内容を動的に変更
+    const toolsContentElement = document.getElementById('toolsContent');
+    if (toolsContentElement) {
+        toolsContentElement.textContent = config.toolsText;
+    }
+</script>
+
+</body>
+</html>
