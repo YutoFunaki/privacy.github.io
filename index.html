@@ -5,232 +5,117 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>プライバシーポリシー</title>
-</head>
-<body>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
-        overflow-y: scroll;
-        margin: 0px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+      line-height: 1.8;
+      color: #333;
+      background: #f5f5f5;
+      padding: 20px;
     }
 
-    font {
-        word-break: break-all;
-        font-family: arial;
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .ImageTitle {
-        border: solid black;
-        border-width: 100px 100px 50px 100px;
-        box-sizing: border-box;
+    h1 {
+      font-size: 32px;
+      color: #0075ef;
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #0075ef;
     }
 
-    .ImageUpperLine {
-        position: absolute;
-        max-width: 100%;
-        max-height: 100%;
-        top: 50px;
+    h2 {
+      font-size: 22px;
+      color: #0075ef;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      padding-left: 12px;
+      border-left: 4px solid #0075ef;
     }
 
-
-    .ImageRightLine {
-        position: fixed;
-        max-width: 100%;
-        max-height: 100%;
-        top: 0px;
-        right: 50px;
+    h2:first-of-type {
+      margin-top: 0;
     }
 
-    .ImageLeftLine {
-        position: fixed;
-        max-width: 100%;
-        max-height: 100%;
-        top: 0px;
-        left: 50px;
+    p {
+      font-size: 16px;
+      margin-bottom: 16px;
+      color: #555;
     }
 
-    .ImageBottomLine {
-        position: absolute;
-        max-width: 100%;
-        max-height: 100%;
-        bottom: 50px;
+    .contact {
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 1px solid #e0e0e0;
+      text-align: center;
     }
 
-    .ImageOthers {
-        border: solid white;
-        border-width: 3px 3px 3px 3px;
-        box-sizing: border-box;
+    .contact p {
+      color: #666;
+      margin-bottom: 8px;
     }
 
-    .VideoYouTube {
-        border: solid white;
-        border-width: 3px 3px 3px 3px;
-        box-sizing: border-box;
+    .email {
+      color: #0075ef;
+      font-weight: 500;
     }
 
-    .BorderText1 {
-        border: solid black;
-        border-width: 0px 60px 0px 60px;
-        box-sizing: border-box;
+    @media (max-width: 768px) {
+      .container {
+        padding: 24px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+      }
     }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>プライバシーポリシー</h1>
 
-    .FontNormal1 {
-        font-size: 20px;
-    }
+    <h2>利用者情報の取得</h2>
+    <p id="dataCollection">本アプリが利用者の個人情報を取得することはありません。</p>
 
-    .FontNormal2 {
-        font-size: 25px;
-    }
+    <h2>利用者情報の利用</h2>
+    <p id="dataUsage">本アプリが利用者の個人情報を利用することはありません。</p>
 
-    .FontTitle {
-        font-size: 60px;
-    }
+    <h2>利用者情報の第三者提供</h2>
+    <p>本アプリが利用者の個人情報を第三者へ提供することはありません。</p>
 
-    .FontSubTitle {
-        font-size: 35px;
-    }
+    <h2>使用ツール</h2>
+    <div id="toolsContent">
+      <p>本アプリでは、広告配信ツールとしてAdMob(Google Inc.)を使用しており、AdMobが利用者の情報を自動取得する場合があります。取得する情報、利用目的、第三者への提供等につきましては、広告配信事業者のアプリケーション・プライバシーポリシーよりご確認ください。</p>
+    </div>
 
-    .FontLink {
-        font-size: 30px;
-    }
-</style>
-
-<body bgcolor="black" link="white" vlink="white" alink="gray">
-
-</body>
-
-
-
-
-
-
-<!-- ページ上線 -->
-<img class="ImageUpperLine" src="Image/Line.png" height="3px" width="100%">
-<!-- タイトル右線 -->
-<img class="ImageRightLine" src="Image/Line.png" height="100%" width="3px">
-<!-- タイトル左線 -->
-<img class="ImageLeftLine" src="Image/Line.png" height="100%" width="3px">
-
-<br>
-
-<div class="BorderText1">
-
-    <center>
-        <font class="FontTitle" color="#0075ef">
-            ・プライバシーポリシー・
-        </font>
-    </center>
-
-    <br><br><br>
-
-    <font class="FontSubTitle" color="#0075ef">
-        [ 利用者情報の取得 ]
-    </font>
-
-    <br>
-
-    <font class="FontNormal1" color="white">
-        本アプリが利用者の個人情報を取得することはありません。
-    </font>
-
-    <br><br><br>
-
-    <font class="FontSubTitle" color="#0075ef">
-        [ 利用者情報の利用 ]
-    </font>
-
-    <br>
-
-    <font class="FontNormal1" color="white">
-        本アプリが利用者の個人情報を利用することはありません。
-    </font>
-
-    <br><br><br>
-
-    <font class="FontSubTitle" color="#0075ef">
-        [ 利用者情報の第三者提供 ]
-    </font>
-
-    <br>
-
-    <font class="FontNormal1" color="white">
-        本アプリが利用者の個人情報を第三者へ提供することはありません。
-    </font>
-
-    <br><br><br>
-
-    <font class="FontSubTitle" color="#0075ef">
-        [ 使用ツール ]
-    </font>
-
-    <br>
-
-    <!-- 動的に変更される部分 -->
-    <font class="FontNormal1" color="white" id="toolsContent">
-        本アプリでは、広告配信ツールとしてAdMob(Google Inc.)を使用しており、AdMobが利用者の情報を自動取得する場合があります。
-        取得する情報、利用目的、第三者への提供等につきましては、広告配信事業者のアプリケーション・プライバシーポリシーよりご確認ください。
-    </font>
-
-    <br><br><br>
-
-    <font class="FontSubTitle" color="#0075ef">
-        [ お問い合わせ先 ]
-    </font>
-
-    <br>
-
-    <font class="FontNormal1" color="white">
-        何かご不明な点がございましたら下記からお問い合わせください。
-    </font>
-
-    <br>
-
-    <font class="FontNormal1" color="white">
-        <p>kaizuka0629@gmail.com</p>
-    </font>
-
-    <br><br><br><br><br>
-    <br><br><br>
-
-</div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div class="relative">
-    <img class="ImageMiddleLine" src="Image/Line.png" height="3px" width="100%">
-</div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
+    <div class="contact">
+      <p>何かご不明な点がございましたら下記からお問い合わせください。</p>
+      <p class="email">kaizuka0629@gmail.com</p>
+    </div>
+  </div>
 
 <script>
     // URLのパスからアプリ名を取得
@@ -251,29 +136,43 @@
     // アプリごとの設定
     const appConfigs = {
         'focusflow': {
-            usesAdMob: false,
-            toolsText: '本アプリでは、広告配信ツール等の外部サービスを使用しておりません。'
+            dataCollection: '本アプリでは、アプリの改善と分析のために、個人を特定できない範囲でセッション情報（アプリの使用時間、機能の利用状況など）を収集する場合があります。',
+            dataUsage: '収集したセッション情報は、アプリの品質向上、機能改善、ユーザー体験の最適化のためにのみ使用されます。個人を特定する目的では使用されません。',
+            toolsText: '<p>本アプリでは、広告配信ツール等の外部サービスを使用しておりません。</p><p>アプリ内の分析機能により、匿名化されたセッション情報を収集していますが、これらの情報は個人を特定するものではなく、アプリの改善目的でのみ使用されます。</p>'
         },
         // 他のアプリを追加する場合はここに記述
         // 'otherapp': {
-        //     usesAdMob: true,
-        //     toolsText: '本アプリでは、広告配信ツールとしてAdMob(Google Inc.)を使用しており...'
+        //     dataCollection: '本アプリが利用者の個人情報を取得することはありません。',
+        //     dataUsage: '本アプリが利用者の個人情報を利用することはありません。',
+        //     toolsText: '<p>本アプリでは、広告配信ツールとしてAdMob(Google Inc.)を使用しており...</p>'
         // }
     };
 
     // デフォルトの設定（アプリ名が指定されていない場合やマッチしない場合）
     const defaultConfig = {
-        usesAdMob: true,
-        toolsText: '本アプリでは、広告配信ツールとしてAdMob(Google Inc.)を使用しており、AdMobが利用者の情報を自動取得する場合があります。取得する情報、利用目的、第三者への提供等につきましては、広告配信事業者のアプリケーション・プライバシーポリシーよりご確認ください。'
+        dataCollection: '本アプリが利用者の個人情報を取得することはありません。',
+        dataUsage: '本アプリが利用者の個人情報を利用することはありません。',
+        toolsText: '<p>本アプリでは、広告配信ツールとしてAdMob(Google Inc.)を使用しており、AdMobが利用者の情報を自動取得する場合があります。取得する情報、利用目的、第三者への提供等につきましては、広告配信事業者のアプリケーション・プライバシーポリシーよりご確認ください。</p>'
     };
 
     // アプリ名に対応する設定を取得（存在しない場合はデフォルト）
     const config = appConfigs[appName] || defaultConfig;
 
-    // 「使用ツール」セクションの内容を動的に変更
+    // 各セクションの内容を動的に変更
+    const dataCollectionElement = document.getElementById('dataCollection');
+    const dataUsageElement = document.getElementById('dataUsage');
     const toolsContentElement = document.getElementById('toolsContent');
+    
+    if (dataCollectionElement) {
+        dataCollectionElement.textContent = config.dataCollection;
+    }
+    
+    if (dataUsageElement) {
+        dataUsageElement.textContent = config.dataUsage;
+    }
+    
     if (toolsContentElement) {
-        toolsContentElement.textContent = config.toolsText;
+        toolsContentElement.innerHTML = config.toolsText;
     }
 </script>
 
